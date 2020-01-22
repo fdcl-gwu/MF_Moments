@@ -4,7 +4,7 @@ if length(ind)==1
     output = integral(@(u) f_kunze_s_deriv_i(u,s,ind),-1,1);
 elseif length(ind)==2
     if ind(1)==ind(2)
-        c = integral(@(u) f_kunze_s(u,s),-1,1);
+        c = getc(s);
         
         ext = setdiff([1,2,3],ind);
         indj = [ind(1),ext(1);ind(1),ext(1)];
@@ -27,13 +27,6 @@ else
     end
 end
 
-end
-
-
-function Y=f_kunze_s(u,s)
-% integrand for the normalizing constant
-    J=besseli(0,1/2*(s(1)-s(2))*(1-u)).*besseli(0,1/2*(s(1)+s(2))*(1+u));
-    Y=1/2*exp(s(3)*u).*J;
 end
 
 

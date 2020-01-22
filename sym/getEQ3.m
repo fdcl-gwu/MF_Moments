@@ -1,4 +1,4 @@
-function [ EQQQ ] = getEQQQ(  )
+function [ EQQQ ] = getEQ3(  )
 
 EQQQ = sym(zeros(9,9,9));
 
