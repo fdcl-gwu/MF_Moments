@@ -10,4 +10,4 @@ output = EQ(s,ind)
 ```
 * The input **s** is the concentration parameter for a Matrix Fisher distribution, which is a 1-by-3 or a 3-by-1 vector;
 * The input **ind** is a n-by-2 matrix of the form [i1,j1;...;in,jn];
-* The **output** is the expectation of Q(i1,j1)*...*Q(in,jn) with Q following a matrix Fisher distribution with parameter S=diag(s).
+* The **output** is the expectation of Q(i1,j1)*...*Q(in,jn) with Q following a matrix Fisher distribution of parameter S=diag(s), multiplied by the normalizing constant. So use `EQ(s,ind)/getc(s)` for expectation.
